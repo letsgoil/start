@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title> git 사용법 </title>
+</head>
+<body>
+
+<h3> 02. Git을 설치하고 로컬저장소에서 커밋 관리하기</h3>
+<ol>
+<li> git 이란 무엇인가 하면 버전을 관리하는 프로그램이다.
+<li> git bash 라는 터미널을 이용해서 디렉토리로 이용하여 모든 명령을 내린다.
+<li> 커밋이란 무엇인가 하면 하나하나의 버전을 나타내는 history 단계를 나타낸다. 
+<li> $ git init                                                                                     :현재 디렉토리를 git으로 버전 관리한다는 의미  
+<li> $ git config --global user.email "letsgoil12@gmail.com"
+<li> $ git config --global user.name "letsgoil"
+<li> $ git add README.txt                                                                    : 커밋에 포함시킬 파일이나 디렉토리를 지정해 준다.
+<li> $ git commit -m "현재버전 커밋 설명 이걸보고 이 커밋으로 찾아온다."          : 하나의 커밋을 history로 저정하는 명령임
+<li> $ git log                                                                                     : 현재까지 생성된 커밋을 보여준다. 이걸보고 찾아갈 커밋을 인지한다.
+<li> $ git checkout 5813bb5                                                                  : git log 에서 확인한 커밋의 번호를 가지고 그단계로 이동한다.
+<li> $ git checkout -                                                                            : 가장최근의 history 단계로 복귀한다.
+</ol>
+<h3> 03. GitHub 원격저장소에 커밋 올리기</h3>
+<ol>
+<li> 원격저장소 : GitHub에 생성한 Repository
+<li> 로컬저장소 : 내컴퓨터에서 생성한 디렉토리로 $ git init 를 실행한 디렉토리
+<li> 원격저장소에 로컬저장소의 커밋을 올리는 것이다. history상의 어떤 커밋을 올리는 것이다.
+<li> GitHub에 생성된 원격저장소를 레포지토리 Repository 라고 부른다.
+<li> New repository 생성 [Repository name] : 생성될 디렉토리명 이라고 이해  [Description] : 디렉토리 설명  [Create repository] : 생성
+<li> 생성한 원격저장소 주소 <a href='https://github.com/letsgoil/start.git'>https://github.com/letsgoil/start.git</a> 끝부분의 start 가 생성한 Repository 이다.
+<li> 원격저장소에 커밋 올리기려면 GitHub에서 만든 Repository 주소를 내컴퓨터의 로컬저장소(git init 한디렉토리)에 알려주고 커밋을 원격저장소에 올린다.
+<li> $ git remote add origin https://github.com/letsgoil/start.git                     : 로컬저장소에 원격저장소 주소를 알려주는것
+<li> $ git push origin master                                                                  : 원격에 마스터 커밋을 올리는 것
+</ol>
+
+<h3> 04. GitHub 원격저장소의 커밋을 로컬저장소에 내려 받기 </h3>
+<ol>
+<li> 내려받을 로컬저장소를 생성하고 git bash 로 이동해서 명령을 내린다.
+<li> 원격저장소의 주소는 GitHub 에서 [Clone or download] 버튼을 눌러서 주소를 복사한다.
+<li> git clone https://github.com/letsgoil/start.git .                                     : 마지막에 한칸띄우고 . 점을 찍어야 현재 디렉토리에 바로 받는다 없으면 start 디렉토리를 생성하고 넣는다.
+<li> 다운받은 커밋을 수정해서 다시 새로운 커밋을 생성한다
+<li> $ git add README.txt
+<li> $ git commit -m "개발자목록추가"
+<li> $ git push orgin master                                                                 : 로컬저장소의 커밋을 원격저장소에 올리는것을 push 라한다.
+<li> 내 로컬저장소로 원격저장소에 새로운 커밋이 있으면 받아라는 명령을 해보자
+<li> $ git pull origin master                                                                 : git clone으로 통으로 받아와서 push 와 pull 로 넣고 당겨오고 한다.                
+</ol>
+
+
+
+</body>
+</html
