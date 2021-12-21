@@ -62,3 +62,17 @@ for number in mylist:
 mylist = [3, 2, 6, 7]
 answer = [number**2 for number in mylist if number % 2 == 0]
 ```
+### While 문은 반복횟수는 모르지만 종료조건을 알때 사용
+ - 무한루프를 돌리면서 조건에 안맞으면 continue를 조건을 충족하면 break 또는 return을 사용한다.
+```python
+while True:
+	name = input("enter the name: ")
+    if name.isalpha():
+    	print("name: ",name)
+        break
+        
+    else:
+    	print("name cannot be an integer")
+        continue
+```
+### for in 문은 반복횟수를 알때 사용 
