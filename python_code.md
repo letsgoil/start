@@ -50,3 +50,15 @@ a = [1,2,3]
 t = [1,5,7,33,39,52]
 reverse_t = t[::-1]
 ```
+### 리스트구문으로 for in if 문 한줄에 사용
+```python
+mylist = [3, 2, 6, 7]
+answer = []
+for number in mylist:
+    if number % 2 == 0:
+        answer.append(number**2) # 들여쓰기를 두 번 함
+```
+```python
+mylist = [3, 2, 6, 7]
+answer = [number**2 for number in mylist if number % 2 == 0]
+```
