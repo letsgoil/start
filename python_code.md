@@ -11,7 +11,7 @@ if any(within_range_criteria):
 	continue
 ```
 ### 반복문 응용 
-(반복문 사용 시 몇 번째 반복문인지 확인이 필요할 수 있습니다. 이때 사용합니다.
+(반복문 사용 시 몇 번째 반복문인지 확인이 필요할 수 있습니다. 이때 enumberate() 사용합니다.
 인덱스 번호와 컬렉션의 원소를 tuple형태로 반환합니다.
 ```python
 t = [1, 5, 7, 33, 39, 52]
@@ -62,6 +62,14 @@ for number in mylist:
 mylist = [3, 2, 6, 7]
 answer = [number**2 for number in mylist if number % 2 == 0]
 ```
+### 리스트구문으로 for in 문 한줄에 사용
+```python
+b=[i for i in range(5)]
+
+>>> b
+>>> [0,1,2,3,4]
+```
+
 ### While 문은 반복횟수는 모르지만 종료조건을 알때 사용
  - 무한루프를 돌리면서 조건에 안맞으면 continue를 조건을 충족하면 break 또는 return을 사용한다.
 ```python
@@ -75,4 +83,14 @@ while True:
     	print("name cannot be an integer")
         continue
 ```
-### for in 문은 반복횟수를 알때 사용 
+### for in 문은 반복횟수를 알때 사용한다.
+
+### with 문은 open해주고 close를 해야하는 함수에 사용한다. 주로 파일을 열고 with문을 빠져나오면 자동으로 닫아주게할때 사용한다.
+```python
+with open('file.txt', 'r') as f:
+    for s in f:
+        print(s, end='')
+```
+
+### 람다함수 map,  apply .... 리스트 활용 literal한 데이터형의 활용
+
